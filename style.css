@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*.precio {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}*/
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f3eae3;
+}
+
+.container {
+    background-color: white;
+    width: 500px;
+    display: flex; 
+    overflow: hidden;
+    border-radius: 10px;   
+    box-shadow: 1px 1px 14px 0px rgba(0,0,0,0.44);
+}
+
+.content,
+.image {
+    width: 250px;
+    height: 380px;
+    padding: 20px;    
+}
+
+
+
+.image {
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image {
+        background-image: url(images/image-product-mobile.jpg);
+        background-position: center;
+        height: 220px;
+        width: 100%;
+    }
+
+    .content {
+        height: 320px;
+        width: 90%;        
+    }
+
+}
+
+.category {
+    font-size: 12px;
+    margin: 15px 0;
+    color: gray;
+    letter-spacing: 3px;
+}
+
+.content h2 {
+    font-family: "Fraunces", serif;
+    font-size: 30px;
+    font-weight: bolder;
+    line-height: 1;
+    color: #34393b;
+    margin-bottom: 20px;
+}
+
+.desc {
+    font-size: 13px;
+    color: gray;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.precio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.precio_oferta {
+    font-family: "Fraunces", serif;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #4b806c;
+}
+
+.precio_lista {
+    font-size: 13px;
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #4b806c;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;    
+}
+
+.btn:hover {
+    background-color: #5a9c83;
+}
+
+.btn p {
+    font-size: 12px;
+    font-weight: bolder;
+}
